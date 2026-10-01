@@ -1,38 +1,77 @@
-# ⚡ ChatGPT Prompt Vault & Variable Injector
+# ⚡ ChatGPT Prompt Vault & Web Clipper
 
-A modern Chrome Extension (Manifest V3) for developers, researchers, and power users to store, search, and 1-click inject reusable prompt templates with variable placeholders into ChatGPT (`chatgpt.com`).
+[![Manifest V3](https://img.shields.io/badge/Manifest-V3-blue.svg)](https://developer.chrome.com/docs/extensions/mv3/intro/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-green.svg)](https://chrome.google.com)
+[![Privacy: 100% Local](https://img.shields.io/badge/Privacy-100%25%20Local-brightgreen.svg)](#privacy--security)
+
+A powerful, high-utility Chrome Extension (Manifest V3) for developers, researchers, prompters, and power users to store, search, and 1-click inject reusable prompt templates with dynamic `{variable}` placeholders directly into ChatGPT (`chatgpt.com`). Includes right-click web clipping!
+
+---
+
+## 📸 Interface Preview
+
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│ ChatGPT - New Chat                                      [⚡ Prompt Vault]│
+├──────────────────────────────────────────────────┬─────────────────────┤
+│                                                  │ ⚡ PROMPT VAULT     │
+│  User: What are microservices?                   │ ─────────────────── │
+│  ChatGPT: Microservices architecture is...       │ 🔍 Search templates │
+│                                                  │ 📌 Saved Templates: │
+│                                                  │ • [Code Reviewer]   │
+│                                                  │ • [Bug Explainer]   │
+│                                                  │ • [SQL Generator]   │
+│                                                  │ ─────────────────── │
+│ [ Enter prompt with {language} or {topic} ]      │ [+ New Template]    │
+└──────────────────────────────────────────────────┴─────────────────────┘
+```
 
 ---
 
 ## 🌟 Key Features
-- ⚡ **1-Click Prompt Drawer**: Floating trigger button right on `chatgpt.com` web app.
-- 🔍 **Instant Search**: Search through your template library by title, tag, or category.
-- 🎯 **Variable Placeholders**: Use `{variable_name}` inside prompts for easy injection.
-- 🖱️ **Right-Click Save**: Select any text on the web, right-click, and select *"Save Selection as ChatGPT Prompt Template"*.
-- ☁️ **Chrome Storage Sync**: Automatically syncs your template vault across all your Chrome browsers.
-- 🎨 **Sleek Dark Theme**: Glassmorphic dark UI tailored to match modern AI interfaces.
+
+- ⚡ **1-Click Prompt Drawer**: Floating trigger button injected directly into `chatgpt.com`.
+- 🎯 **Dynamic `{variable}` Placeholders**: Embed placeholders like `{code_snippet}` or `{target_audience}` into templates. When clicked, an input modal opens to populate values before pasting.
+- 🖱️ **Right-Click Web Clipper**: Highlight text on any website, right-click, and select *"Save Selection to ChatGPT Prompt Vault"*.
+- 🔍 **Instant Search & Tagging**: Filter prompt templates by title, tag, or category in real-time.
+- ☁️ **Chrome Storage Sync**: Automatically syncs your template library across all your Chrome browsers.
+- 🎨 **Glassmorphism Dark Theme**: Sleek UI designed to match modern AI dark interfaces.
 
 ---
 
-## 🚀 Installation Guide
+## 🚀 Easy Installation Guide
 
-1. Clone or download this repository:
-   ```bash
-   git clone https://github.com/giridharpatil333/chatgpt-prompt-vault.git
-   ```
-2. Open Chrome and navigate to `chrome://extensions`.
-3. Enable **Developer mode** in the top-right corner.
-4. Click **Load unpacked** and select the `extensions/chatgpt-prompt-vault` directory.
-5. Open [ChatGPT](https://chatgpt.com) and click the floating ⚡ button or the extension popup icon!
+### Option 1: 1-Click Download (Recommended)
+1. Download [**chatgpt-prompt-vault-v1.0.0.zip**](./chatgpt-prompt-vault-v1.0.0.zip).
+2. Extract the unzipped folder on your machine.
+3. Open Google Chrome and go to `chrome://extensions`.
+4. Turn ON **Developer mode** in the top-right corner.
+5. Click **Load unpacked** and select the unzipped directory.
+
+### Option 2: Clone via Git
+```bash
+git clone https://github.com/giridharpatil333/chatgpt-prompt-vault.git
+```
+Then load the cloned folder in `chrome://extensions`.
 
 ---
 
-## 🛠️ Built With
-- **Manifest V3** (Content Scripts, Service Worker Background API, Storage Sync)
-- **Vanilla JavaScript & Modern CSS** (Zero bloated dependencies)
-- **Shadow DOM Isolation & DOM Mutation Observers**
+## 💡 How to Use
+
+1. Open [ChatGPT](https://chatgpt.com).
+2. Click the floating ⚡ button or click the extension icon in your Chrome toolbar.
+3. Select any saved prompt. If it contains placeholders like `{topic}`, fill in the pop-up fields and click **Insert into Chat**!
+
+---
+
+## 🔒 Privacy & Security
+
+Your prompts and web clips are stored locally using `chrome.storage.sync` within your own Google Chrome profile. No external servers or analytics trackers are used.
 
 ---
 
 ## 📜 License
-MIT License. Created by [Giridhar Patil](https://github.com/giridharpatil333).
+
+MIT License © [Giridhar Patil](https://github.com/giridharpatil333).
+
